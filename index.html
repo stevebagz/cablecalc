@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Prototype</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Signal Attenuation Calculator</h1>
+    </header>
+    <div id="main-section">
+        <form action="" onsubmit="event.preventDefault(); calculate()">
+            <label for="wireSize">Cable Type</label>
+                <select id="wireSize" name="wireSize" required>
+                    <option value="RG6">RG6</option>
+                    <option value="RG11">RG11</option>
+                </select>
+            
+            <label for="wireLength">Wire Length &#40;feet&#41;</label>
+                <input type="number" required id="wireLength" name="wireLength">
+            
+            <label for="lowFreq">Channel 98 &#40;111 MHz&#41; at tap</label>
+            <input type="number" name="lowFreq" id="lowFreq" required>
+
+            <label for="hiFreq">Channel 110 &#40;741 MHz&#41; at tap</label>
+                <input type="number" name="hiFreq" id="hiFreq" required>
+
+            <button type="submit">Calculate!</button>
+
+        </form>
+    </div>  
+    <div id="answer-container">
+        <p id="answerText"></p>
+    </div>
+</body>
+</html>
