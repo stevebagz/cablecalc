@@ -14,16 +14,27 @@ function calculate() {
     if (wireSelection === "RG6") {
         answerLow = Math.round(((cableLength/100) * rg6LowLossPer100) * 10) /10;
         answerHigh = Math.round(((cableLength/100) * rg6HighLossPer100) * 10) /10;
+        answerLow = answerLow.toFixed(1);
+        answerHigh = answerHigh.toFixed(1);
+        let approxSignalLow = (inputLow - answerLow).toFixed(1);
+        let approxSignalHigh = (inputHigh - answerHigh).toFixed(1);
+    
+
         
-        document.getElementById("answerText").innerText = `Ch. 98 / Ch. 110 should read approx. ${inputLow - answerLow} / ${inputHigh - answerHigh} 
+        document.getElementById("answerText").innerText = `Ch. 98 / Ch. 110 should read approx. ${approxSignalLow} / ${approxSignalHigh} 
         Loss on Ch.98 (111MHz) - ${answerLow} dBmV
         Loss on Ch.110 (741MHz) - ${answerHigh} dBmV`
     }
     else {
         answerLow = Math.round(((cableLength/100) * rg11LowLossPer100) * 10) /10;
         answerHigh = Math.round(((cableLength/100) * rg11HighLossPer100) * 10) /10;
+        answerLow = answerLow.toFixed(1);
+        answerHigh = answerHigh.toFixed(1);
+        let approxSignalLow = (inputLow - answerLow).toFixed(1);
+        let approxSignalHigh = (inputHigh - answerHigh).toFixed(1);
+    
         
-        document.getElementById("answerText").innerText = `Ch. 98 / Ch. 110 should read approx. ${inputLow - answerLow} / ${inputHigh - answerHigh} 
+        document.getElementById("answerText").innerText = `Ch. 98 / Ch. 110 should read approx. ${approxSignalLow} / ${approxSignalHigh} 
         Loss on Ch.98 (111MHz) - ${answerLow} dBmV
         Loss on Ch.110 (741MHz) - ${answerHigh} dBmV`
     }
