@@ -6,6 +6,10 @@ function calculate() {
     let rg6HighLossPer100 = 5.65;
     let rg11LowLossPer100 = 1.35;
     let rg11HighLossPer100 = 3.65;
+    let rg6LowLossPer100 = 2.3;
+    let rg6HighLossPer100 = 5.65;
+    let rg11LowLossPer100 = 1.35;
+    let rg11HighLossPer100 = 3.65;
     let answerLow = null;
     let answerHigh = null;
     let inputLow = document.getElementById("lowFreq").value;
