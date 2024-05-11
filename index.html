@@ -1,3 +1,48 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Prototype</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Signal Attenuation Calculator</h1>
+    </header>
+    <div id="main-section">
+        <form action="" onsubmit="event.preventDefault(); calculate()">
+            <label for="wireSize">Cable Type</label>
+                <select id="wireSize" name="wireSize" required>
+                    <option value="RG6">RG6</option>
+                    <option value="RG11">RG11</option>
+                </select>
+            
+            <label for="wireLength">Wire Length &#40;feet&#41;</label>
+                <input type="number" required id="wireLength" name="wireLength">
+            
+            <label for="lowFreq">Channel 98 &#40;111 MHz&#41; signal at tap &#40;dBmV&#41;</label>
+            <input type="number" name="lowFreq" id="lowFreq" required>
+
+            <label for="hiFreq">Channel 110 &#40;741 MHz&#41; signal at tap &#40;dBmV&#41;</label>
+                <input type="number" name="hiFreq" id="hiFreq" required>
+
+            <button type="submit">Calculate!</button>
+
+        </form>
+    </div>  
+    <div id="answer-container">
+        <p id="answerText"></p>
+    </div>
+    <div id="disclaimer">
+        <p id="disclaimer-text">This is not a precision measuring tool and is not designed to replace the troubleshooting process,
+            but to help streamline it.
+        </p>
+    </div>
+</body>
+=======
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,4 +81,5 @@
         <p id="answerText"></p>
     </div>
 </body>
+>>>>>>> 86ae3ae514e6efb09788c60a9b06739312f5d709
 </html>
